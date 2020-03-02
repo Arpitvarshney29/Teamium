@@ -1,0 +1,16 @@
+{
+	"A.T.A.":"A.T.A.",
+	"CARNET":"CARNET",
+	"GENERAL LIST":"GENERAL LIST",
+	"Item No.":"Item No.",
+	"Tread description":"Trade description of goods and marks and numbers, if any",
+	"Pieces":"Number of Pieces",
+	"Weight":"Weight or Volume",
+	"Value":"Value*",
+	"Country":"Country of origin**",
+	"Customs":"For Customs Use",
+	"Identification":"Identification marks",
+	"Total":"TOTAL or CARRIED OVER",
+	"Star1":"*Commercial value in country/customs territory of issue and in its currency, unless stated differently",
+	"Star2":"**Show country of origin if different from country/customs territory of issue of the Carnet, using ISO country codes"
+}

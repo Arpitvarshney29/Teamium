@@ -1,0 +1,413 @@
+<html>
+<head>
+<style>
+@page { @bottom-left { content:element(footer);
+	vertical-align: top;
+	padding-top: 10px;
+	/* border: solid red; */
+}
+
+@top-right {
+	content: element(header);
+	vertical-align: bottom;
+	padding-bottom: 10px;
+	/*  border: solid green; */
+}
+
+
+size: A4 portrait ; margin-top: 4cm ; margin-left: 1cm ; margin-right: 
+	 2cm ; margin-bottom: 3.6cm ; thead {
+	display: table-header-group;
+}
+
+}
+div.header {
+	display: block;
+	position: running(header);
+	/*  border-bottom: 1px solid black; */
+}
+
+div.footer {
+	margin-top: 0.5cm;
+	display: block;
+	position: running(footer);
+	/* border-top: 1px solid black; */
+}
+
+div.content {
+	/*  border: solid purple;  */
+	display: block;
+	width: 15.4cm;
+	text-align: justify;
+}
+
+#pagenumber:before {
+	content: counter(page);
+}
+
+#pagecount:before {
+	content: counter(pages);
+}
+
+.upper-div {
+	display: block;
+	overflow: hidden;
+	padding: 0 15px;
+}
+
+.upper-div .img1 {
+	display: inline-block;
+	width: 200px;
+	height: 100px;
+	margin-left: 15px;
+	float: left;
+}
+
+.upper-div .quantity {
+	font-size: 25px;
+	opacity: 0.9;
+	float: right;
+	color: #969491;
+	white-space: nowrap;
+	width: 100%;
+	margin: 0 0 6px;
+	width: 100%;
+}
+/* Headings Details div*/
+.headings-details-div {
+	display: block;
+	/*overflow: hidden;*/
+}
+
+.headings-details-div .title {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	/*  font-family: sans-serif; */
+	/*transform: scaleX(1.04303);*/
+}
+
+.to_contact_div {
+	overflow: hidden;
+	float: left;
+	display: table;
+	margin-top: 15px;
+	margin-left: 20px;
+	padding-left: 9px;
+}
+
+.to {
+	/*width: 310px;*/
+	font-size: 18px;
+	font-weight: bold;
+	font-family: sans-serif;
+	margin: 0;
+	/*transform: scaleX(1.06104);*/
+}
+
+.to .to_content {
+	font-size: 18px;
+	font-weight: normal;
+	font-family: sans-serif;
+	margin: 0;
+	/*transform: scaleX(1.06104);*/
+}
+
+.quotation_date_expire_div {
+	overflow: hidden;
+	float: right;
+	display: table;
+	margin-top: 15px;
+	margin-right: 20px;
+	padding-left: 15px;
+	padding-right: 5px;
+}
+
+.quotation_date_expire_div .data {
+	width: 350px;
+	font-size: 18px;
+	/* font-weight: bold;
+            font-family: sans-serif;
+            transform: scaleX(1.06104); */
+}
+
+.data .to_content {
+	font-size: 18px;
+	margin-right: 10px;
+	/* font-weight: normal;
+            font-family: sans-serif;
+            transform: scaleX(1.06104) */;
+}
+/*    Nishant Div for Table    */
+.description table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.description th {
+	background-color: #c2c2c6;
+	color: black;
+	text-align: center;
+}
+
+.description tr {
+	/*             height: 10px !important; */
+	
+}
+
+.description td {
+	text-align: left;
+}
+
+.description tr:nth-child(odd) {
+	background-color: #f2f2f2;
+}
+
+.p-table-info {
+	width: 100%;
+}
+
+.total-heading {
+	text-align: left;
+	width: 80px;
+	font-weight: bold;
+	border: 0;
+}
+
+.total-content {
+	text-align: right;
+	border: 0;
+}
+
+.description .table-description {
+	border-collapse: collapse;
+	border: 1px solid black;
+	border-style: groove;
+	top: 50px;
+	margin-top: 100px !important;
+}
+
+.total .table-total, .total td, .total tr {
+	border-collapse: collapse;
+	border: none;
+}
+
+.comment-zone {
+	margin-bottom: 100px;
+}
+
+.bottom-content {
+	margin-top: 2%;
+	margin-left: 2%
+}
+
+.wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+	font-family: sans-serif;
+	font-size: 14px;
+}
+
+table {
+	border-collapse: collapse;
+	font-size: 14px;
+	-webkit-print-color-adjust: exact;
+}
+
+table td, table th {
+	padding: 8px;
+}
+
+.table thead {
+	background: #a1a2a2;
+	color: #fff;
+}
+
+.table thead tr th:first-child {
+	text-align: left;
+}
+
+.table tbody tr:nth-child(even) {
+	background: #e6e6e6;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+.header-table {
+	width: 100%;
+	border: 0;
+}
+
+.header-table td {
+	border: 0 !important;
+}
+
+.test {
+	padding: 1px 8px 1px 8px !important;
+	height: 15px;
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<div class="upper-div">
+			<table class="header-table">
+				<tbody>
+					<tr>
+						<td style="border: 0 !important"><!-- <img class="img1" -->
+							<!-- src="http://www.paymentscardsandmobile.com/wp-content/uploads/2015/08/Amex-icon.jpg" /> -->
+							<img class="img1"
+							th:if=" ${(company != null) and (company.logo!=null)}"
+							th:src="${company.logo.url}" />
+						</td>
+						<td align="right" style="border: 0 !important">
+							<p style="font-size: 25px; color: #969491;"
+								th:text=" ${pdfTitle} "></p>
+							<p th:text=" ${header} "></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr />
+	</div>
+
+
+
+
+	<div class="footer">
+		<hr />
+		<div style="text-align: center;">
+			<span th:text=" ${footer} "></span>
+			<!-- <span th:if="${company != null}" th:text="${company.name}+','+ ${company.address.line1}+','+ ${company.address.city}+','+${company.address.country}"></span> -->
+		</div>
+	</div>
+	<div>
+		<div>
+			<div class="headings-details-div">
+				<div class="title">
+				<p th:text=" ${project.title} " />
+			</div>
+				<table class="p-table-info">
+					<tr style="">
+						<td style="border: 0;">
+
+
+							<div th:if=" ${staff != null}">
+								<span class="to_content" th:text="${staff.firstName}"
+									style="margin: 0; font-weight: bold;"></span>, <span
+									class="to_content" th:text="${staff.lastName}"
+									style="margin: 0; font-weight: bold;"></span>
+
+							</div> 
+							
+							<b>Emp ID:</b> <span class="to_content" th:text="${staff.id}"></span>
+							
+
+						</td>
+						<td style="border: 0;">
+							<div>
+								<div class="test" style="text-align: right;; font-size: 18px">
+									<div class="data">
+										<b>Expense Report: </b><span th:text=" ${id} "></span>
+									</div>
+								</div>
+								<div class="test" style="text-align: right; font-size: 18px;line-height: 180%;">
+									<div class="data">
+										<b>Date:</b> <span th:text="  ${projectDate} "></span>
+									</div>
+								</div>
+<!-- 								<div class="test" -->
+<!-- 									style="text-align: right; font-size: 18px; font-weight: bold;line-height: 180%;"> -->
+<!-- 									<div class="data"> -->
+<!-- 										<b></b> <span th:text=" ${project.title} "></span> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+
+
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr />
+	</div>
+
+
+	<table class="table-description" width="100%" align="center"
+		style="margin-top: 103px;">
+		<tr style="background-color: #a1a2a2;">
+			<th style="width: 10%">Items</th>
+			<th style="width: 30%">Description</th>
+			<th style="width: 20%">Date</th>
+			<th style="width: 20%">Company Amount</th>
+			<th style="width: 20%">Personnel Amount</th>
+
+		</tr>
+		<tr th:each="Expense,i: ${Expensereport}"  th:style="${i.odd} ?'background-color: #e6e6e6':'page-break-inside:avoid;'">
+			<td th:text="${i.count}" ></td>
+			<td th:text="${Expense.name}"></td>
+			<td th:text="${Expense.date}"></td>
+			<td style="text-align: right;"
+				th:text="${Expense.companyCardExpense}"></td>
+			<td style="text-align: right;" th:text="${Expense.personalExpense}"></td>
+		</tr>
+		<tr class="even-line">
+			<td style="border:none !important;"></td>
+			<td style="border:none !important;"></td>
+			<td style="border:none !important;"></td>
+			<td style="border:none !important;"></td>
+			<td style="border:none !important;"></td>
+		</tr>
+		<tr class="even-line">
+			<td style="border:none !important;"></td>
+			<td style="border:none !important;"></td>
+			<td style="border:none !important;   border-top: 1px solid lightgray; font-weight: bold; "> Total:</td>
+			<td style="text-align: right;border:none !important;border-top: 1px solid lightgray;"
+				th:text="${currencySymbol} +' '+${totalCompanyCardExpenses}"></td>
+			<td style="text-align: right;border:none !important;border-top: 1px solid lightgray;" th:text="${currencySymbol} +' '+${totalPersonalExpenses}"></td>
+		</tr>
+	</table>
+	<div class="bottom-content">
+
+		<div style="width: 25%; margin-top: 100px; float: left;">
+
+			<div>
+				<br> <b>Approved By</b>: </br> <br> <b>Date</b>: </br> <br> <b>Signature</b>:
+				</br>
+
+
+			</div>
+		</div>
+		<div
+			style="width: 25%; margin-top: 100px; padding-right: 20%; 80 px; float: right;">
+
+			<div>
+				<br> <b>Approved By</b>: </br> <br> <b>Date</b>: </br> <br> <b>Signature</b>:
+				</br>
+			</div>
+		</div>
+
+		<div class="total"></div>
+
+
+	<!-- 	<table class="table-total"
+			style="margin-left: 10%; float: right; position: absolute; right: 7px !important; border: 1px solid!improtant;">
+			<tr>
+				<td class="total-heading" Style="padding-right: 40px !important">Total:</td>
+				<td
+					Style="width: 100px; text-align: right !important;"
+					th:text="${currencySymbol} +' '+${totalCompanyCardExpenses}"></td>
+				<td Style="width: 110px; text-align: right !important;"
+					th:text="${currencySymbol} +' '+${totalPersonalExpenses}"></td>
+			</tr>
+		</table> -->
+	</div>
+
+
+
+</body>
+</html>

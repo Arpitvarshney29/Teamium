@@ -1,0 +1,16 @@
+{
+	"A.T.A.": "A.T.A.",
+	"CARNET": "CARNET",
+	"GENERAL LIST": "LISTE GENERALE ",
+	"Item No.": " N° d'ordre ",
+	"Tread description": " Désignation commerciale des marchandises et, le cas échéant, marques et numéros ",
+	"Pieces": "Nombre de Pièces",
+	"Weight": "Poids ou Volume",
+	"Value": "Valeur*",
+	"Country": "Pays d'origne**",
+	"Customs": " Réservé à la douane",
+	"Identification": " Marques d'identification",
+	"Total": "TOTAL ou A REPORTER",
+	"Star1": "*Valeur commerciale dans le pays/territoire douanier d'émission et dans sa monnaie, sauf indication contraire",
+	"Star2": "**Indiquer le pays d'origine s'il est différent du pays/territoire douanier d'émission du carnet, en utilisant le code international des pays ISO "
+}

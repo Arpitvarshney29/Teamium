@@ -1,0 +1,453 @@
+<html>
+<head>
+<style>
+@page { @bottom-left { content:element(footer);
+	vertical-align: top;
+	padding-top: 10px;
+	/* border: solid red; */
+}
+
+@top-right {
+	content: element(header);
+	vertical-align: bottom;
+	padding-bottom: 10px;
+	/*  border: solid green; */
+}
+
+size: A4 portrait ;
+            margin-top: 4cm;
+            margin-left: 1cm;
+            margin-right: 2cm;
+            margin-bottom: 3.6cm ;
+            thead {
+	display: table-header-group;
+}
+
+}
+div.header {
+	display: block;
+	position: running(header);
+	/* border-bottom: 1px solid black; */
+}
+
+div.footer {
+	margin-top: 0.5cm;
+	display: block;
+	position: running(footer);
+	/*  border-top: 1px solid black; */
+}
+
+div.content {
+	/*  border: solid purple;  */
+	display: block;
+	width: 15.4cm;
+	text-align: justify;
+}
+
+#pagenumber:before {
+	content: counter(page);
+}
+
+#pagecount:before {
+	content: counter(pages);
+}
+
+.upper-div {
+	display: block;
+	overflow: hidden;
+	padding: 0 15px;
+}
+
+.upper-div .img1 {
+	display: inline-block;
+	width: 200px;
+	height: 100px;
+	margin-left: 15px;
+	float: left;
+}
+
+.upper-div .quantity {
+	font-size: 25px;
+	opacity: 0.9;
+	float: right;
+	color: #969491;
+	white-space: nowrap;
+	width: 100%;
+	margin: 0 0 6px;
+	width: 100%;
+}
+/* Headings Details div*/
+.headings-details-div {
+	display: block;
+	/*overflow: hidden;*/
+}
+
+.headings-details-div .title {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	/*  font-family: sans-serif; */
+	/*transform: scaleX(1.04303);*/
+}
+
+.to_contact_div {
+	overflow: hidden;
+	float: left;
+	display: table;
+	margin-top: 15px;
+	margin-left: 20px;
+	padding-left: 9px;
+}
+
+.to {
+	/*width: 310px;*/
+	font-size: 18px;
+	font-weight: bold;
+	font-family: sans-serif;
+	margin: 0;
+	/*transform: scaleX(1.06104);*/
+}
+
+.to .to_content {
+	font-size: 18px;
+	font-weight: normal;
+	font-family: sans-serif;
+	margin: 0;
+	/*transform: scaleX(1.06104);*/
+}
+
+.quotation_date_expire_div {
+	overflow: hidden;
+	float: right;
+	display: table;
+	margin-top: 15px;
+	margin-right: 20px;
+	padding-left: 15px;
+	padding-right: 5px;
+}
+
+.quotation_date_expire_div .data {
+	width: 350px;
+	font-size: 18px;
+	/* font-weight: bold;
+            font-family: sans-serif;
+            transform: scaleX(1.06104); */
+}
+
+.data .to_content {
+	font-size: 18px;
+	margin-right: 10px;
+	/* font-weight: normal;
+            font-family: sans-serif;
+            transform: scaleX(1.06104) */;
+}
+/*    Nishant Div for Table    */
+.description table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.description th {
+	background-color: #c2c2c6;
+	color: black;
+	text-align: center;
+}
+
+.description tr {
+	height: 20px !important;
+}
+
+.description td {
+	text-align: left;
+}
+
+.description tr:nth-child(odd) {
+	background-color: #f2f2f2;
+}
+
+.p-table-info {
+	width: 100%;
+}
+
+.total-heading {
+	text-align: left;
+	width: 200px;
+	font-weight: bold;
+	border: 0;
+}
+
+.total-content {
+	text-align: right;
+	border: 0;
+}
+
+.description .table-description {
+	border-collapse: collapse;
+	border: 1px solid black;
+	border-style: groove;
+}
+
+.total .table-total, .total td, .total tr {
+	border-collapse: collapse;
+	border: none;
+}
+
+.comment-zone {
+	margin-bottom: 100px;
+}
+
+.bottom-content {
+	margin-top: 4%;
+	margin-left: 1%
+}
+
+.wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+	font-family: sans-serif;
+	font-size: 14px;
+}
+
+table {
+	border-collapse: collapse;
+	font-size: 14px;
+	-webkit-print-color-adjust: exact;
+}
+
+table td, table th {
+	padding: 8px;
+}
+
+.table thead {
+	background: #a1a2a2;
+	color: #fff;
+}
+
+.table thead tr th:first-child {
+	text-align: left;
+}
+
+.table tbody tr:nth-child(even) {
+	background: #e6e6e6;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+.header-table {
+	width: 100%;
+	border: 0;
+}
+
+.header-table td {
+	border: 0 !important;
+}
+
+.width50 {
+	width: 50%;
+}
+
+.width48 {
+	width: 48%;
+}
+
+.width100 {
+	width: 100%;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.color-light {
+	color: #999;
+}
+
+.padding10 {
+	padding: 10px;
+}
+
+.print:LAST-CHILD {
+	page-break-after: avoid !important;
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<div class="upper-div">
+			<table class="header-table">
+				<tbody>
+					<tr>
+						<td style="border: 0 !important">
+							<!-- 					 <img class="img1" src="http://www.paymentscardsandmobile.com/wp-content/uploads/2015/08/Amex-icon.jpg" />  -->
+							<!-- 					<img class="img1" src="https://www.google.com/search?q=jpg+image&tbm=isch&source=iu&ictx=1&fir=NfuDGtWEj8btoM%253A%252CF0AM3uST3qogpM%252C_&usg=AI4_-kQu-LQ2l5Djtqc-kCouU2rIxxE4Mg&sa=X&ved=2ahUKEwjWrvLmlu_fAhVJL48KHcbKD_UQ9QEwA3oECAMQCg#imgrc=NfuDGtWEj8btoM:"> -->
+							<img class="img1"
+							th:if=" ${(company != null) and (company.logo!=null)}"
+							th:src="${company.logo.url}" />
+						</td>
+
+						<td align="right" style="border: 0 !important">
+							<p style="font-size: 25px; color: #969491;"
+								th:text=" ${pdfTittle} "></p>
+							<p th:text=" ${header} "></p>
+
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr />
+	</div>
+
+	<div class="footer">
+		<hr />
+		<div style="text-align: center;">
+			<span th:text=" ${footer} "></span>
+			<!-- <span th:if="${company != null}" th:text="${company.name}+','+ ${company.address.line1}+','+ ${company.address.city}+','+${company.address.country}"></span> -->
+		</div>
+	</div>
+	<div>
+		<div>
+			<div class="headings-details-div">
+				<div class="title">
+					<p th:text=" ${budget.title} " />
+				</div>
+				<table class="p-table-info">
+					<tr style="">
+						<td style="border: 0;">
+							<div class="to">
+
+								<div th:if=" ${budget.company != null}">
+									To:<span class="to_content" th:text="${budget.company.name}"
+										style="margin: 0;"></span>
+									<p class="to_content">
+										<!-- <span  ><b>Address:</b></span> -->
+										<span th:text=" ${address}"></span>
+									</p>
+									<!-- <p class="to_content" th:if=" ${budget.company.address != null}"
+									th:text="${budget.company.address.line1}+','+ ${budget.company.address.city}+','+${budget.company.address.country}"></p>
+								<p class="to_content" th:if="${budget.company.address != null} and ${budget.company.address.zipcode != null}"
+									th:text="'Zipcode -'+ ${budget.company.address.zipcode}"></p> -->
+								</div>
+							</div>
+							<div class="to" style="margin-top: 5px">
+								Channels: <span class="to_content" th:text="${channels}"></span>
+							</div>
+							<div class="to" style="margin-top: 5px">
+								Location: <span class="to_content" th:text="${location}"></span>
+							</div>
+							<div class="to">
+								Contact: <span class="to_content" th:text="${contact}"></span>
+							</div>
+						</td>
+						<td style="border: 0; width: 150px;">
+							<div>
+								<div class="test" style="text-align: right;; font-size: 18px">
+									<div class="data">
+										<b>Project: </b><span th:text=" ${budget.id} ">1234</span>
+									</div>
+								</div>
+								<div class="test" style="text-align: right;; font-size: 18px">
+									<div class="data">
+										<b>Date:</b> <span th:text=" ${date}"></span>
+									</div>
+								</div>
+								<!-- <div class="test" style="text-align: right;">
+								<div class="data">
+									Date: <span class="to_content" th:text=" ${date} ">MM/DD/YYYY</span>
+								</div>
+							</div> -->
+
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<hr />
+			<div>
+				<span> <b>Comment:</b>
+				</span><span th:text="${comments}"></span>
+			</div>
+			<hr />
+
+		</div>
+
+		<div>
+			<h3>Equipment</h3>
+			<table class="table-description" width="100%" align="center">
+				<tr style="background-color: #a1a2a2">
+					<th style="width: 30%">Equipment</th>
+					<th style="width: 20%">Model</th>
+					<th style="width: 20%">Serial Number</th>
+					<th style="width: 30%">Comment</th>
+
+
+				</tr>
+				<tr th:each="instance : ${equipmentLines}">
+					<td th:text="${instance.value.name}"></td>
+					<td th:text="${instance.value.model}"></td>
+					<td th:text="${instance.value.serialNumber}"></td>
+					<td th:text="${instance.value.description}"></td>
+				</tr>
+			</table>
+		</div>
+
+
+	</div>
+
+		
+		<br></br> <br></br>
+		<div class="float-left width50">
+			<b>Signatures:</b><br></br> <br></br>
+
+			<div class="print repeat" style="border: 1px solid;page-break-inside: avoid;"
+				th:each="signature : ${signatureList}">
+				<div class="width100" style="display: inline-block;">
+					<div class="width48 float-left">
+						<div class="padding10">
+							<div class="width100">
+								<b
+									th:text="${signature.recipient.firstName + ' ' + signature.recipient.lastName}"></b>
+							</div>
+							<div class="width100 color-light"
+								th:text="${signature.recipient.jobTitle}"></div>
+						</div>
+						<div class="padding10">
+							<div class="width100">
+								<b th:if="signature.signatureDate != null"
+									th:text="${#dates.format(signature.signatureDate.getTime(), 'MM/dd/yyyy')}"></b>
+							</div>
+							<div class="width100 color-light"
+								th:if="signature.signatureDate != null"
+								th:text="${#dates.format(signature.signatureDate.getTime(), 'hh:mm a')}"></div>
+						</div>
+					</div>
+					<div class="width48 float-right">
+						<img th:if=" ${(signature.recipient.userSettingDTO!=null and signature.recipient.userSettingDTO.signaturePath)}"
+							th:src="${signatureImageList.get(signature.id)}" alt="" height="70" class="width100"
+							style="margin-top: 15%;" />
+					</div>
+				</div>
+
+				<div class="width100 padding10" style="display: inline-block;">
+					<div class="width48 float-left">
+						<label for="1"><b>Approved </b></label> <input type="checkbox"
+							id="1"
+							th:checked="${signature.approved != null and signature.approved == true}" th:readonly="true"/>
+					</div>
+					<div class="width48 float-right">
+						<label for="1"><b>Rejected</b></label> <input type="checkbox"
+							id="1"
+							th:checked="${signature.approved != null and signature.approved == false}" th:readonly="true"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+</body>
+</html>

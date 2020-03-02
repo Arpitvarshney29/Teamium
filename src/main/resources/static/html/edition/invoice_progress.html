@@ -1,0 +1,508 @@
+<html>
+<head>
+<style>
+@page { @bottom-left { content:element(footer);
+	vertical-align: top;
+	padding-top: 10px; /
+	border: solid red;
+	/
+}
+
+@
+top-right {
+	content: element(header);
+	vertical-align: bottom;
+	padding-bottom: 10px; /
+	border: solid green;
+	/
+}
+
+size: A4 portrait ; margin-top: 4cm ; margin-left: 1cm ; margin-right: 
+	 2cm ; margin-bottom: 3.6cm ; thead {
+	display: table-header-group;
+}
+
+}
+div.header {
+	display: block;
+	position: running(header); /
+	border-bottom: 1px solid black;
+	/
+}
+
+div.footer {
+	margin-top: 0.5cm;
+	display: block;
+	position: running(footer); /
+	border-top: 1px solid black;
+	/
+}
+
+div.content { /
+	border: solid purple; /
+	display: block;
+	width: 15.4cm;
+	text-align: justify;
+}
+
+#pagenumber:before {
+	content: counter(page);
+}
+
+#pagecount:before {
+	content: counter(pages);
+}
+
+.upper-div {
+	display: block;
+	overflow: hidden;
+	padding: 0 15px;
+}
+
+.upper-div .img1 {
+	display: inline-block;
+	width: 200px;
+	height: 100px;
+	margin-left: 15px;
+	float: left;
+}
+
+.upper-div .quantity {
+	font-size: 25px;
+	opacity: 0.9;
+	float: right;
+	color: #969491;
+	white-space: nowrap;
+	width: 100%;
+	margin: 0 0 6px;
+	width: 100%;
+}
+/* Headings Details div*/
+.headings-details-div {
+	display: block;
+	/*overflow: hidden;*/
+}
+
+.headings-details-div .title {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold; /
+	font-family: sans-serif;
+	/
+	/*transform: scaleX(1.04303);*/
+}
+
+.to_contact_div {
+	overflow: hidden;
+	float: left;
+	display: table;
+	margin-top: 15px;
+	margin-left: 20px;
+	padding-left: 9px;
+}
+
+.to {
+	/*width: 310px;*/
+	font-size: 18px;
+	font-weight: bold;
+	font-family: sans-serif;
+	margin: 0;
+	/*transform: scaleX(1.06104);*/
+}
+
+.to .to_content {
+	font-size: 18px;
+	font-weight: normal;
+	font-family: sans-serif;
+	margin: 0;
+	/*transform: scaleX(1.06104);*/
+}
+
+.quotation_date_expire_div {
+	overflow: hidden;
+	float: right;
+	display: table;
+	margin-top: 15px;
+	margin-right: 20px;
+	padding-left: 15px;
+	padding-right: 5px;
+}
+
+.quotation_date_expire_div .data {
+	width: 350px;
+	font-size: 18px;
+	/* font-weight: bold;
+            font-family: sans-serif;
+            transform: scaleX(1.06104); */
+}
+
+.data .to_content {
+	font-size: 18px;
+	margin-right: 10px;
+
+	/* font-weight: normal;
+            font-family: sans-serif;
+            transform: scaleX(1.06104) */;
+}
+
+/
+Nishant Div for Table /
+.description table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.description th {
+	background-color: #c2c2c6;
+	color: black;
+	text-align: center;
+}
+
+.description tr { /
+	height: 10px !important;
+	/
+}
+
+.description td {
+	text-align: left;
+}
+
+.description tr:nth-child(odd) {
+	background-color: #f2f2f2;
+}
+
+.p-table-info {
+	width: 100%;
+}
+
+.total-heading {
+	text-align: left;
+	width: 200px;
+	font-weight: bold;
+	border: 0;
+}
+
+.total-content {
+	text-align: right;
+	border: 0;
+}
+
+.description .table-description {
+	border-collapse: collapse !important;
+	border: 1px solid black !important;
+	border-style: groove;
+}
+
+.total .table-total, .total td, .total tr {
+	border-collapse: collapse;
+	border: none;
+}
+
+.comment-zone {
+	margin-bottom: 100px;
+}
+
+.bottom-content {
+	margin-top: 2%;
+	margin-left: 2%
+}
+
+.wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+	font-family: sans-serif;
+	font-size: 14px;
+}
+
+table {
+	border-collapse: collapse;
+	font-size: 14px;
+	-webkit-print-color-adjust: exact;
+}
+
+table td, table th {
+	padding: 8px;
+}
+
+.table thead {
+	background: #a1a2a2;
+	color: #fff;
+}
+
+.table thead tr th:first-child {
+	text-align: left;
+}
+
+.table tbody tr:nth-child(even) {
+	background: #e6e6e6;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+.header-table {
+	width: 100%;
+	border: 0;
+}
+
+.header-table td {
+	border: 0 !important;
+}
+
+.test {
+	padding: 1px 8px 1px 8px !important;
+	height: 15px;
+	border: 1px solid;
+}
+
+.a1 {
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<div class="upper-div">
+			<table class="header-table">
+				<tbody>
+					<tr>
+						<td style="border: 0 !important">
+							<!-- <img class="img1" src="http://www.paymentscardsandmobile.com/wp-content/uploads/2015/08/Amex-icon.jpg" /> -->
+							<img class="img1"
+							th:if=" ${(company != null) and (company.logo!=null)}"
+							th:src="${company.logo.url}" />
+						</td>
+
+						<td align="right" style="border: 0 !important">
+							<p style="font-size: 25px; color: #969491;"
+								th:text=" ${pdfTittle} "></p>
+							<p th:text=" ${header} "></p>
+
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr />
+	</div>
+
+	<div class="footer">
+		<hr />
+		<div style="text-align: center;">
+			<span th:text=" ${footer} "></span>
+			<!-- <span th:if="${company != null}" th:text="${company.name}+','+ ${company.address.line1}+','+ ${company.address.city}+','+${company.address.country}"></span> -->
+		</div>
+	</div>
+	<div>
+		<div class="headings-details-div">
+			<div class="title">
+				<p th:text=" ${budget.title} " />
+			</div>
+			<table class="p-table-info">
+				<tr style="">
+					<td style="border: 0;">
+						<div class="to">
+
+							<div th:if=" ${budget.company != null}">
+								To: <span class="to_content" th:text="${budget.company.name}"
+									style="margin: 0;"></span><br></br>
+								<p class="to_content"
+									th:if="${budget.company.address!=null and budget.company.address.line1!='' }">
+									<span
+										th:if="${budget.company.address.line1!=null and  budget.company.address.line1!=''}"></span>
+									<b>Address: </b><span th:text="${budget.company.address.line1}"></span>
+								</p>
+
+								<p class="to_content" th:if="${budget.company.address }">
+									<span
+										th:if="${budget.company.address.city!= null and budget.company.address.city!= ''}"></span>
+									<b>Location: </b><span th:text="${budget.company.address.city}"></span>
+								</p>
+
+								<p class="to_content" th:if="${budget.company.address }">
+									<span
+										th:if="${budget.company.address.country!=null and budget.company.address.country!= ''}"></span>
+									<b>Country: </b><span
+										th:text="${budget.company.address.country}"></span>
+								</p>
+
+								<p class="to_content" th:if="${budget.company.address}">
+									<span
+										th:if="${ budget.company.address.zipcode!=null and budget.company.address.zipcode!=''}"></span>
+									<b>Zipcode: </b> <span
+										th:text="${budget.company.address.zipcode}"></span>
+								</p>
+
+							</div>
+						</div>
+
+						<div class="to">
+							Contact: <span class="to_content" th:text="${contact}"></span>
+						</div>
+					</td>
+					<td style="border: 0;">
+						<div>
+							<div style="text-align: right;; font-size: 18px">
+								<div class="data">
+									<b>Project: </b><span th:text=" ${budget.id} "></span>
+								</div>
+							</div>
+
+							<div style="text-align: right; font-size: 18px">
+								<div class="data">
+									<b>Date:</b> <span style="line-height: 180%;"
+										th:text=" ${date}"></span>
+								</div>
+							</div>
+							<!-- <div class="test" style="text-align: right;">
+								<div class="data">
+									Date: <span class="to_content" th:text=" ${date} ">MM/DD/YYYY</span>
+								</div>
+							</div> -->
+
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<hr />
+		<div class="description" style="margin-bottom: 10px;">
+
+			<div class="comment-zone" th:if="${comment}!=null">
+				<span> <b>Comment:</b>
+				</span><span th:text="${comment}"></span>
+			</div>
+
+		</div>
+
+		<div class="data">
+			 <span style="line-height: 180%;" th:text=" ${percentage}"></span>%
+			 <span>for Initial Budget</span>
+		</div>
+
+		<div th:each="writer,itrStat : ${lines}">
+			<h3 style="margin-top: 40px;" th:text="${writer.key}"></h3>
+			<table class="table-description" align="center" width="100%"
+				style="border: 1px solid black;">
+				<tr
+					style="background-color: #a1a2a2; page-break-inside: avoid; border: 1px solid black;">
+					<th
+						style="width: 20%; text-align: center; border: 1px solid black;">Items</th>
+					<th
+						style="width: 40%; text-align: center; border: 1px solid black;">Description</th>
+					<th style="width: 5%; text-align: center; border: 1px solid black;">Quantity</th>
+					<!-- <th style="width: 10%">Currency</th>  -->
+					<th
+						style="width: 10%; text-align: center; border: 1px solid black;">Rate</th>
+					<th style="width: 5%; text-align: center; border: 1px solid black;">Duration</th>
+					<th
+						style="width: 10%; text-align: center; border: 1px solid black;">Basis</th>
+					<!-- <th style="width: 10%">Tax</th> -->
+					<th
+						style="width: 10%; text-align: center; border: 1px solid black;">Total</th>
+
+				</tr>
+				<tr th:each="line,i: ${writer.value} "
+					th:style="${i.odd} ?'background-color: #e6e6e6'">
+					<td class="test" th:text="${line.function.value}"></td>
+					<td class="test" th:text="${line.comment}"></td>
+					<td class="test" style="text-align: center"><p
+							th:text="${#numbers.formatInteger(line.occurrenceCount,1)}"></p></td>
+					<!--  <td ><p th:text="${line.persistentCurrency}"></p></td>  -->
+					<td class="test" style="text-align: right"><p
+							th:if="${line.unitPrice!=null}"
+							th:text="${#numbers.formatDecimal(line.unitPrice,1,2)}"></p></td>
+					<td class="test" style="text-align: center"><p
+							th:if="${line.qtySoldPerOc!=null}"
+							th:text="${#numbers.formatInteger(line.qtySoldPerOc,1)}"></p></td>
+					<td class="test" style="text-align: center">
+						<p th:text="${line.getUnitString()}"></p>
+					</td>
+					<!-- <td ><p th:if="${line.vat}!=null" th:text="${line.getVatAmount()}"> </p></td> -->
+					<td class="test" style="text-align: right">
+						<p th:if="${line.qtySoldPerOc!=null}"
+							th:text="${#numbers.formatDecimal(line.unitPrice*line.occurrenceCount*line.qtySoldPerOc,1,2)}"></p>
+					</td>
+				</tr>
+			</table>
+
+
+
+		</div>
+		<div class="bottom-content">
+			<!-- 			<div style="width: 55%; float: left;"> -->
+
+			<div style="width: 45%; float: left;">
+
+				<div>
+					<p>
+						<b>Terms</b>:<span th:text="${terms}"></span>
+					</p>
+
+				</div>
+			</div>
+
+			<div style="withd: 38%; float: right; margin-top: 60px;">
+
+				<div class="total"></div>
+				<!-- <div>
+					<span><b>Total: </b></span><span th:text="${currencySymbol} +' '+${totalAfterTax}"></span>
+				</div> -->
+
+				<table border="1">
+
+					<tr th:if="${totalDiscount} > 0">
+						<td><b>Subtotal</b>(Excluding Tax)</td>
+
+						<td th:text="${currencySymbol}+' '+${subTotal} "></td>
+					</tr>
+					<tr th:if="${totalDiscount} > 0">
+						<td><b>Total Discount</b></td>
+						<td th:text="${currencySymbol}+' '+${totalDiscount}"></td>
+					</tr>
+
+					<tr>
+						<td><b>Invoice Progress</b><br /></td>
+						<td th:text="${currencySymbol}+' '+${invoiceProgress} ">US$
+							zzzz.00<br></br>
+						</td>
+					</tr>
+					<tr>
+						<td><b>Total Tax</b><br /></td>
+						<td th:text="${currencySymbol}+' '+${totalVat} ">US$ zzzz.00<br></br>
+						</td>
+					</tr>
+					<tr>
+						<td><b>Total Invoiced</b><br /></td>
+						<td th:text="${currencySymbol}+' '+${invoiceTotal} ">US$
+							zzzz.00<br></br>
+						</td>
+					</tr>
+					<tr>
+						<td><b>Balanced Due</b><br /></td>
+						<td th:text="${currencySymbol}+' '+${invoiceBalance} ">US$
+							zzzz.00<br></br>
+						</td>
+					</tr>
+					<!-- 					<tr> -->
+					<!-- 						<td><b>Total Price</b>(Including Tax)</td> -->
+					<!-- 						<td th:text="${currencySymbol}+' '+${totalAfterTax}+''"></td> -->
+					<!-- 					</tr> -->
+				</table>
+				<!-- 	<table> 
+					<hr></hr>
+					<tr>
+						<td class="total-heading" border="0">Total</td>
+						<td Style="width: 50%;" class="total-content" border="0"
+							th:text=" ${budget.totalPrice} ">US$ 00</td>
+					</tr>
+				</table>  -->
+
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
